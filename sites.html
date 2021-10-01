@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="robots" content="noindex,nofollow">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Web Development Examples</title>
+<style type="text/css"><!--  
+   body { 
+		font-family: Verdana, Arial, Helvetica, sans-serif; 
+		font-size: 11px; 
+		background-color: #FFF;
+		text-align: center;
+	}
+	a { 
+		color: #cc6633; 
+		text-decoration: none; 
+	}
+	a:hover { 
+		text-decoration: underline; 
+	}
+	#main {
+		width: 650px;
+		margin-top: 20px;
+		text-align: left;
+		margin-left: auto;
+		margin-right: auto;
+	}
+   .container {
+		width: 654px;
+		margin-bottom: 20px;
+		border: 1px solid #666;
+		background-color: #FFF;
+		-moz-box-shadow: 5px 5px 3px #CCC;
+		-webkit-box-shadow: 5px 5px 3px #CCC;
+		box-shadow: 5px 5px 3px #CCC;
+		-moz-border-radius: 10px;
+		border-radius: 10px;
+   }
+   h1 {
+		color: #333;
+		font-size: 18px;
+		margin: 0 0 10px 0;
+		padding: 0;
+   }
+   h2 {
+		color: #333;
+		font-size: 15px;
+		margin: 10px;
+		padding: 0;
+   }
+   h3 {
+		font-size: 11px;
+		margin: 0 0 2px 0;
+		color: #003399;
+		padding: 0;
+   }
+   p {
+		line-height: 20px;
+		margin: 10px 0;
+   }
+   ul {
+		list-style: none;
+   }
+   ul.nav {
+		margin: 20px 0 20px 0;
+		padding: 0;
+   }
+   ul.nav > li {
+		margin: 0 0 0 10px;
+   }
+   ul.sites,
+   ul.notes {
+		margin: 10px;
+		padding: 0;
+		width: 634px;
+		float: left;
+		clear: both;
+   }
+   ul.notes {
+		margin-top: 0;
+   }
+   ul.sites > li,
+   ul.notes > li{
+		float: left;
+		margin-right: 10px;
+		width: 204px;
+   }
+   ul > li.last {
+		margin-right: 0px !important;
+   }
+   ul.sites > li {
+		height: 254px;
+   }
+   ul.sites li > a {
+		height: 250px;
+		width: 200px;
+		float: left;
+		border: 2px solid #666;
+		text-indent: -2000px;	
+   }
+   ul.sites.mm li,
+   ul.sites.mm li > a   {
+		height: 170px !important;
+   }
+   ul.sites.rn li,
+   ul.sites.rn li > a   {
+		height: 200px !important;
+   }
+   ul.sites.hg li,
+   ul.sites.hg li > a   {
+		height: 200px !important;
+   }
+   ul.sites li > a:hover {
+		border-color: #cc6633 !important;
+		font-size: 16px;
+		text-indent: 20px;
+		line-height: 120px;
+		text-decoration: none;
+		color: #007FFF;
+		_text-indent: -1000px;
+   }
+   .layout2 ul.sites {
+		width: 212px;
+		clear: none;
+   }
+   .layout2 ul.sites li {
+		clear: both;
+		margin-bottom: 10px;
+   }
+   .layout2 ul.notes {
+		clear: none;
+		width: 360px;
+		float: left;
+		margin-top: 10px;
+		margin-bottom: 10px;
+   }
+   .layout2 ul.notes li {
+		clear: both;
+		width: 350px;
+   }
+   .layout2 ul.notes.mm li {
+		height: 180px;
+   }
+   .layout2 ul.notes.rn li {
+		height: 213px;
+   }
+   .layout2 ul.notes.hg li {
+		height: 210px;
+   }
+   .layout2 ul.notes.bs li {
+		height: 265px;
+   }
+   
+   .layout-btn-ct {
+		width: 136px;
+		clear: both;
+		padding: 0;
+		margin: 0;
+		height: 30px;
+		float: right;
+		display: block;
+   }
+   .layout-btn-ct li {
+	   border: 1px solid #CCC;
+	   color: #CCC;
+	   padding: 2px;
+	   margin: 0 5px 2px 0;
+	   width: 53px;
+	   float: left;
+	   cursor: pointer;
+	   text-align: center;
+	   -moz-border-radius: 5px;
+		border-radius: 5px;
+   }
+   .layout-btn-ct li:hover, 
+   .layout1 #layoutBtn1,
+   .layout2 #layoutBtn2 {
+		border-color: #cc6633;
+		color: #000;
+   }
+   .layout-btn-ct li.noscript {
+	   color: #000;
+	   width: 136px;
+	   border: none;
+	   text-align: left;
+   }
+   
+   @media only screen and (max-width: 650px) {
+	    #main {
+			width: 100%;
+	    }
+		.container {
+			width: 100%;
+		}
+		.container .content {
+			display: flex;
+			display: -webkit-flex;
+			flex: 1;
+			-webkit-flex: 1;
+		}
+	    .container ul.sites {
+			flex-basis: 212px;
+			-webkit-flex-basis: 212px;
+			width: 212px;
+			clear: none;
+	    }
+	    ul.sites li {
+			clear: both;
+			margin-bottom: 10px;
+	    }
+	    ul.notes {
+			clear: none;
+			width: 99%;
+			float: left;
+			margin-top: 10px;
+			margin-bottom: 10px;
+			-ms-flex: 0.6;
+	    }
+	    ul.notes li,
+	    .layout2 ul.notes li{
+			width: 98%;
+			clear: both;
+			flex: .8;
+	    }
+	    ul.notes.mm li {
+			height: 180px;
+	    }
+	    ul.notes.rn li {
+			height: 213px;
+	    }
+	    ul.notes.hg li {
+			height: 210px;
+	    }
+	    ul.notes.bs li {
+			width: 99%;
+			height: 265px;
+	    }
+		.layout-btn-ct {
+			display: none;
+		}
+		
+   }
+   
+   
+   .mmMkt {
+		background:#666 url(./images/sites.gif) 0 0 no-repeat;
+   }
+   .mmChart {
+		background: #666 url(./images/sites.gif) 0 -470px no-repeat;
+   }
+   .mmTreemap {
+		background: #666 url(./images/sites.gif) 0 -672px no-repeat;
+   }
+   .mmEnforce {
+		background:#666 url(./images/sites.gif) 0 -225px no-repeat;
+		margin-right: 0px !important;
+   }
+   .rnArtist {
+		background:#666 url(./images/sites.gif) -220px 0 no-repeat;
+   }
+   .rnGallery {
+		background: #666 url(./images/sites.gif) -220px -525px no-repeat;
+   }
+   .rnFeatures {
+		background:#666 url(./images/sites.gif) -220px -240px no-repeat;
+		margin-right: 0px !important;
+   }
+   .hgHv {
+		border-color: #336666;
+		background:#FFF url(./images/sites.gif) -440px 0 no-repeat;
+   }
+   .hgBl {
+		border-color: #666;
+		background: #666 url(./images/sites.gif) -440px -230px no-repeat;
+   }
+   .hgAe {
+		background:#FFF url(./images/sites.gif) -440px -460px no-repeat;
+		margin-right: 0px !important;
+   }
+   .eco {
+		border-color: #336666;
+		background:#336666 url(./images/sites.gif) -660px 0 no-repeat;
+   }
+   .b2 {
+		border-color: #666;
+		background: #666 url(./images/sites.gif) -660px -250px no-repeat;
+   }
+   .b2new {
+		background:#FFF url(./images/sites.gif) -660px -528px no-repeat;
+		margin-right: 0px !important;
+   }
+   .clear {
+		clear: both;
+		height: 1px;
+		font-size: 1px;
+   }
+   .back {
+		width: 100%;
+		text-align: right;
+		margin-bottom: 80px;
+   }
+   .res {
+		float: right;
+		font-weight: bold;
+		margin-bottom: 10px;
+   }
+   .res a {
+		border: 1px solid #CCC;
+		background-color: #FFF;
+		-moz-box-shadow: 2px 2px 1px #CCC;
+		-webkit-box-shadow: 2px 2px 1px #CCC;
+		box-shadow: 2px 2px 1px #CCC;
+		-moz-border-radius: 10px;
+		border-radius: 10px;
+		padding: 5px;
+		font-size: 13px;
+		color: #008000;
+		float: left;
+   }
+   .res a:hover {
+		background-color: #DDEEFF;
+		text-decoration: none;
+   }
+   .note {
+		font-size: 10px;
+   }
+
+--></style>
+</head>
+<body id="theBody" class="layout1">
+<a id="top"></a>
+<div id="main">
+
+<h1>Web Development Examples</h1>
+
+<p>The followings are screenshots of applications that I've worked on. 
+They're screenshots only because the actual applications are behind user authentication or have been changed. 
+<br/><span class="note">Note: To print this page, please enable the <i>"Print Background"</i> page setup option.</span>
+</p>
+
+<ul class="layout-btn-ct">
+	<li id="layoutBtn1" title="layout1">Layout 1</li>
+	<li id="layoutBtn2" title="layout2">Layout 2</li>
+	<li class="noscript"><noscript>Please enable JavaScript to change layout.</noscript></li>
+</ul>
+
+<ul class="nav">
+	<li><a href="#mm">MarkMonitor, Inc.</a></li> 
+	<li><a href="#rn">Rhapsody - RealNetworks</a></li>  
+	<li><a href="#hg">HomeGain, Inc.</a></li>
+	<li><a href="#b2">Business 2.0</a></li>
+</ul>
+
+<a id="mm"></a>
+<div class="container">
+	<h2>MarkMonitor, Inc.</h2>
+	<div class="content">
+		<ul class="sites mm">
+			<li><a href="./images/mm_marketplaces.png" class="mmMkt" target="blank" title="Buffer Grid Panel">Please Click Here</a></li>
+			<li><a href="./images/mm_treemap.png" class="mmTreemap" target="blank" title="Chart">Please Click Here</a></li>
+			<li class="last"><a href="./images/mm_enforcement.png" class="mmEnforce" target="blank" title="Enforcement Application">Please Click Here</a></li>
+		</ul>
+		<ul class="notes mm">
+			<li><h3>Buffer Grid Panel</h3>Implemented Buffer Grid to do bufferred rendering of visible rows in the grid panel, resulting performance improvement. </li>
+			<li><h3>Charts</h3>Created JS UI to integrate back end data with charts libraries to display analysis charts.</li>
+			<li class="last"><h3>Enforcement Application</h3>Created the JS UI for the Enforcement Application for clients to submit enforcements online.</li>
+		</ul>
+	</div>
+	<br class="clear"/>
+</div>
+
+<div class="back"><a href="#top">Back to Top</a></div>
+
+<a id="rn"></a>
+<div class="container">
+	<h2>Rhapsody - RealNetworks</h2>
+	<div class="content">
+		<ul class="sites rn">
+			<li><a href="./images/rn_artist.gif" class="rnArtist" target="blank" title="Artist Page">Please Click Here</a></li>
+			<li><a href="./images/rn_gallery.gif" class="rnGallery" target="blank" title="Artist Gallery">Please Click Here</a></li>
+			<li class="last"><a href="./images/rn_features.gif" class="rnFeatures" target="blank" title="Featured News Feeds">Please Click Here</a></li>
+		</ul>
+		<ul class="notes rn">
+			<li><h3>Artist Page Template</h3>Created JSP template to display artist data returned from back-end controller.</li>
+			<li><h3>Artist Gallery</h3>Wrote the slide show widget to display artist photos dynamically.</li>
+			<li class="last"><h3>Featured News Feeds</h3>Wrote JS API to parse and display featured news feeds.</li>
+		</ul>
+	</div>
+	<br class="clear"/>
+</div>
+
+<div class="back"><a href="#top">Back to Top</a></div>
+
+<a id="hg"></a>
+<div class="container">
+	<h2>HomeGain, Inc.</h2>
+	<div class="content">
+		<ul class="sites hg">
+			<li><a href="./images/hg_home_valuation.png" class="hgHv" target="blank" title="Home Valuation">Please Click Here</a></li>
+			<li><a href="http://www.homegain.com/agent/buyerlink/search" class="hgBl" target="blank" title="Service Sign Up Application">Please Click Here</a></li>
+			<li class="last"><a href="http://www.homegain.com/agent/new_registration" class="hgAe" target="blank" title="Agent Registration Application">Please Click Here</a></li>
+		</ul>
+		<ul class="notes hg">
+			<li><h3>Home Valuation Application</h3>Used AJAX and DHTML to create the Home Valuation application to get home price XML feeds and integrate with Google map.</li>
+			<li><h3>Service Sign Up Application</h3>Developed the multi-step BuyerLink web application for agents to order product services.</li>
+			<li class="last"><h3>Membership Registration</h3>Developed the Agent Registration web application for agents to register membership online.</li>
+		</ul>
+	</div>
+	<br class="clear"/>
+</div>
+
+<div class="back"><a href="#top">Back to Top</a></div>
+
+<a id="b2"></a>
+<div class="container">
+	<h2>Business 2.0</h2>
+	<div class="content">
+		<ul class="sites">
+			<li><a href="./images/site1.gif" class="eco" target="blank" title="eCompany Homepage">Please Click Here</a></li>
+			<li><a href="./images/site2.gif" class="b2" target="blank" title="Business 2.0 Homepage">Please Click Here</a></li>
+			<li class="last"><a href="./images/b2_home.png" class="b2new" target="blank" title="Re-designed Business 2.0 Homepage">Please Click Here</a></li>
+		</ul>
+		<ul class="notes bs">
+			<li><h3>Startup Websites</h3>Took major role in developing and launching the original eCompany website from start up.</li>
+			<li><h3>Transition Sites</h3>Transited the old eCompany Now sites into Business 2.0 websites.</li>
+			<li class="last"><h3>Site Re-design Implementation</h3>Hand coded clean HTML and CSS, JavaScript and DHTML programming for the re-designed Business 2.0 websites.</li>
+		</ul>
+	</div>	
+	<br class="clear"/>
+</div>
+
+<div class="back"><a href="#top">Back to Top</a></div>
+
+</div>
+
+<script type="text/javascript">
+
+	(function() {
+		function changeLayout() {
+		    document.getElementById('theBody').className = this.title;
+		}
+		document.getElementById('layoutBtn1').onclick = changeLayout;
+		document.getElementById('layoutBtn2').onclick = changeLayout;
+	})();
+	
+</script>
+</body>
+</html>
