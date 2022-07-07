@@ -86,8 +86,9 @@
 		margin-right: 10px;
 		width: 204px;
    }
-   ul > li.last {
-		margin-right: 0px !important;
+   ul.sites > li.last,
+   ul.notes > li.last {
+		margin-right: 0px;
    }
    ul.sites > li {
 		height: 254px;
@@ -101,18 +102,18 @@
    }
    ul.sites.mm li,
    ul.sites.mm li > a   {
-		height: 170px !important;
+		height: 170px;
    }
    ul.sites.rn li,
    ul.sites.rn li > a   {
-		height: 200px !important;
+		height: 200px;
    }
    ul.sites.hg li,
    ul.sites.hg li > a   {
-		height: 200px !important;
+		height: 200px;
    }
    ul.sites li > a:hover {
-		border-color: #cc6633 !important;
+		border-color: #cc6633;
 		font-size: 16px;
 		text-indent: 20px;
 		line-height: 120px;
@@ -241,8 +242,15 @@
 		}
 		
    }
-   
-   
+	.osNI {
+		background:#666 url(./images/os_network_tn.png) 0 0 no-repeat;
+	}
+	.osGrid {
+		background:#666 url(./images/os_lists_tn.png) 0 0 no-repeat;
+	}
+	.osReport {
+		background:#666 url(./images/os_pb_tn.png) 0 0 no-repeat;
+	}
    .mmMkt {
 		background:#666 url(./images/sites.gif) 0 0 no-repeat;
    }
@@ -254,7 +262,7 @@
    }
    .mmEnforce {
 		background:#666 url(./images/sites.gif) 0 -225px no-repeat;
-		margin-right: 0px !important;
+		margin-right: 0px;
    }
    .rnArtist {
 		background:#666 url(./images/sites.gif) -220px 0 no-repeat;
@@ -264,7 +272,7 @@
    }
    .rnFeatures {
 		background:#666 url(./images/sites.gif) -220px -240px no-repeat;
-		margin-right: 0px !important;
+		margin-right: 0px;
    }
    .hgHv {
 		border-color: #336666;
@@ -276,7 +284,7 @@
    }
    .hgAe {
 		background:#FFF url(./images/sites.gif) -440px -460px no-repeat;
-		margin-right: 0px !important;
+		margin-right: 0px;
    }
    .eco {
 		border-color: #336666;
@@ -288,7 +296,7 @@
    }
    .b2new {
 		background:#FFF url(./images/sites.gif) -660px -528px no-repeat;
-		margin-right: 0px !important;
+		margin-right: 0px;
    }
    .clear {
 		clear: both;
@@ -346,11 +354,32 @@ They're screenshots only because the actual applications are behind user authent
 </ul>
 
 <ul class="nav">
+	<li><a href="#os">OpSec Security, Inc.</a></li>
 	<li><a href="#mm">MarkMonitor, Inc.</a></li> 
 	<li><a href="#rn">Rhapsody - RealNetworks</a></li>  
 	<li><a href="#hg">HomeGain, Inc.</a></li>
 	<li><a href="#b2">Business 2.0</a></li>
 </ul>
+
+<a id="os"></a>
+<div class="container">
+	<h2>OpSec Security, Inc.</h2>
+	<div class="content">
+		<ul class="sites mm">
+			<li><a href="./images/os_network.png" class="osNI" target="blank" title="Network Chart">Please Click Here</a></li>
+			<li><a href="./images/os_lists.png" class="osGrid" target="blank" title="Grid View">Please Click Here</a></li>
+			<li class="last"><a href="./images/os_pb.png" class="osReport" target="blank" title="Report">Please Click Here</a></li>
+		</ul>
+		<ul class="notes mm">
+			<li><h3>Network Chart</h3>Created network chart to display cluster node relationship</li>
+			<li><h3>Grid View</h3>Displaying massive data in grid table with sorting, filtering, and pagination</li>
+			<li class="last"><h3>Graphic Reports</h3>Integration with external PowerBI API to display graphic reports</li>
+		</ul>
+	</div>
+	<br class="clear"/>
+</div>
+
+<div class="back"><a href="#top">Back to Top</a></div>
 
 <a id="mm"></a>
 <div class="container">
