@@ -101,6 +101,10 @@
 		border: 2px solid #666;
 		text-indent: -2000px;	
    }
+    ul.sites.at li,
+	ul.sites.at li > a   {
+		height: 162px;
+	}
 	ul.sites.os li,
 	ul.sites.os li > a   {
 		height: 135px;
@@ -145,6 +149,9 @@
 		clear: both;
 		width: 350px;
    }
+   .layout2 ul.notes.at li {
+		height: 180px;
+	}
 	.layout2 ul.notes.os li {
 		height: 145px;
 	}
@@ -232,6 +239,9 @@
 			clear: both;
 			flex: .8;
 	    }
+		ul.notes.at li {
+		   height: 180px;
+	   }
 	   ul.notes.os li {
 		   height: 150px;
 	   }
@@ -253,6 +263,15 @@
 		}
 		
    }
+   .atDb {
+		background:#666 url(./images/at_db_tn.png) 0 0 no-repeat;
+	}
+	.atList {
+		background:#666 url(./images/at_list_tn.png) 0 0 no-repeat;
+	}
+	.atCase {
+		background:#666 url(./images/at_case_tn.png) 0 0 no-repeat;
+	}
 	.osNI {
 		background:#666 url(./images/os_network_tn.png) 0 0 no-repeat;
 	}
@@ -365,12 +384,33 @@ They're screenshots only because the actual applications are behind user authent
 </ul>
 
 <ul class="nav">
+	<li><a href="#at">Arietta.ai</a></li>
 	<li><a href="#os">OpSec Security, Inc.</a></li>
 	<li><a href="#mm">MarkMonitor, Inc.</a></li> 
 	<li><a href="#rn">Rhapsody - RealNetworks</a></li>  
 	<li><a href="#hg">HomeGain, Inc.</a></li>
 	<li><a href="#b2">Business 2.0</a></li>
 </ul>
+
+<a id="at"></a>
+<div class="container">
+	<h2>Arietta.ai</h2>
+	<div class="content">
+		<ul class="sites at">
+			<li><a href="./images/at_db.png" class="atDb" target="blank" title="Dashboard">Please Click Here</a></li>
+			<li><a href="./images/at_list.png" class="atList" target="blank" title="Filterable List View">Please Click Here</a></li>
+			<li class="last"><a href="./images/at_case.png" class="atCase" target="blank" title="Multi-Pane View">Please Click Here</a></li>
+		</ul>
+		<ul class="notes at">
+			<li><h3>Dashboard</h3>Created impact and usage dashboard with date range filter</li>
+			<li><h3>React Data Grid</h3>Implemeted react data grid with search, filters, and saved views</li>
+			<li class="last"><h3>Multi-Pane View</h3>Created collapsible multi-pane document review with search pdf and download feature</li>
+		</ul>
+	</div>
+	<br class="clear"/>
+</div>
+
+<div class="back"><a href="#top">Back to Top</a></div>
 
 <a id="os"></a>
 <div class="container">
